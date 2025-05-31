@@ -11,10 +11,31 @@ body {
   padding: 2rem;
 }
 
+.hero h1 {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #5a4230;
+}
+
+
 .hero-img {
-  width: 200px;
-  border-radius: 50%;
+  width: 400px; /* increased from 200px */
+  max-width: 90vw;
+  border-radius: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.divider img {
+  width: 100%;
+  height: auto;
+  max-height: 150px; /* cap max height */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .video-section {
