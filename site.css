@@ -6,69 +6,53 @@ body {
 }
 
 .hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 4rem 10vw;
-  background-color: #f5e9dc;
-  flex-wrap: wrap;
+  background-color: #e6dcc9;
 }
 
 .hero-img {
-  flex: 1 1 40%;
-  max-width: 600px;
-  width: 100%;
-  border-radius: 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.hero-text {
-  flex: 1 1 50%;
-  text-align: left;
-  padding: 1rem 2rem;
-}
-
-.hero-text h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-.hero-text p {
-  font-size: 1.5rem;
-  color: #5a4230;
-}
-
-.video-section {
-  position: relative;
-  height: 400px;
-  overflow: hidden;
-}
-
-.bg-video {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
-.divider-wrapper {
-  width: 100%;
-  height: 150px;
-  overflow: hidden;
-  position: relative;
+.hero h1,
+.hero p {
+  position: absolute;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin: 0;
 }
 
-.divider-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-  display: block;
+.hero h1 {
+  font-size: 4rem;
+  top: 10%;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  top: 20%;
 }
 
 .content {
-  width: 100%;
   padding: 4rem 10vw;
   text-align: center;
   background-color: #fff;
+}
+
+.jungle-theme {
+  background-color: #fefae0;
+  border-top: 4px dashed #a3b18a;
+  border-bottom: 4px dashed #a3b18a;
 }
 
 .content h2 {
@@ -93,7 +77,6 @@ body {
 }
 
 .footer {
-  width: 100%;
   text-align: center;
   padding: 2rem 1rem;
   background-color: #f5e9dc;
