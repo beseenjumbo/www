@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom, #214d36 0%, #dff6eb 40%, #f0fbe9 100%);
+  background: linear-gradient(to bottom, #214d36 0%, #2c5f45 20%, #dff6eb 60%, #f0fbe9 90%, #f5e9dc 100%);
   color: #2f2f2f;
 }
 
@@ -13,7 +13,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 3rem;
   background-color: transparent;
 }
 
@@ -29,7 +28,7 @@ body {
 .hero h1,
 .hero p {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 4.5rem;
   width: 100%;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
@@ -121,8 +120,9 @@ body {
 .footer {
   text-align: center;
   padding: 2rem 1rem;
-  background-color: #f5e9dc;
+  background-color: transparent;
   font-size: 1.2rem;
+  color: #2f2f2f;
 }
 
 .footer a {
