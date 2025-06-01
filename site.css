@@ -11,36 +11,41 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background-color: #e6dcc9;
+  position: relative;
 }
 
 .hero-img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  object-fit: contain;
+  object-position: bottom;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .hero h1,
 .hero p {
-  position: absolute;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
   text-align: center;
   margin: 0;
+  z-index: 1;
 }
 
 .hero h1 {
   font-size: 4rem;
-  top: 10%;
+  margin-bottom: 1rem;
 }
 
 .hero p {
   font-size: 1.5rem;
-  top: 20%;
+  margin-bottom: 2rem;
 }
 
 .content {
