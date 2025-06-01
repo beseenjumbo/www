@@ -68,10 +68,7 @@
 <footer class="footer">
   <div class="footer-elephant-wrapper">
     <div class="footer-elephant">
-      <img src="./assets/elephant_tiny.png" alt="Trumpeting Elephant" class="tiny-elephant" />
-      <div class="honk-beams">
-        <span></span><span></span><span></span>
-      </div>
+      <img src="./assets/elephant_announce.png" alt="Trumpeting Elephant" class="tiny-elephant" />
     </div>
     <div class="footer-text">
       <p>Follow the Jungle Whispers 🐾</p>
@@ -79,7 +76,6 @@
     </div>
   </div>
 </footer>
-
 
 </body>
 </html>
@@ -144,39 +140,11 @@
   .footer-elephant {
     display: flex;
     align-items: center;
-    position: relative;
   }
 
   .tiny-elephant {
-    max-width: 40px;
-    opacity: 0.75;
-  }
-
-  .honk-beams {
-    display: flex;
-    gap: 4px;
-    position: absolute;
-    left: 35px;
-    top: 8px;
-    animation: honkAnim 1.2s ease-in-out infinite;
-  }
-
-  .honk-beams span {
-    display: block;
-    width: 20px;
-    height: 2px;
-    background: orange;
-    transform-origin: left;
-  }
-
-  .honk-beams span:nth-child(1) {
-    transform: rotate(-25deg);
-  }
-  .honk-beams span:nth-child(2) {
-    transform: rotate(0deg);
-  }
-  .honk-beams span:nth-child(3) {
-    transform: rotate(25deg);
+    max-width: 60px;
+    opacity: 0.85;
   }
 
   .footer-text {
@@ -187,12 +155,6 @@
   .footer-text a {
     margin: 0.25rem 0;
     display: block;
-  }
-
-  @keyframes honkAnim {
-    0% { transform: scale(1); opacity: 0.9; }
-    50% { transform: scale(1.2); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.9; }
   }
 </style>
 
