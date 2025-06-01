@@ -64,44 +64,53 @@ body {
   margin: 0 auto;
 }
 
-.content {
-  padding: 4rem 10vw;
-  background-color: #fff;
+.info-cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
+  padding: 4rem 10vw;
+  background-color: #fff;
 }
 
-.jungle-theme {
+.card {
   background-color: #fefae0;
-  border-top: 4px dashed #a3b18a;
-  border-bottom: 4px dashed #a3b18a;
+  border: 2px solid #a3b18a;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 400px;
+  flex: 1 1 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.content h2 {
-  font-size: 2.5rem;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
-  width: 100%;
-  text-align: center;
+  color: #344e41;
 }
 
-.content p,
-.content ul {
-  font-size: 1.2rem;
+.card p,
+.card ul {
+  font-size: 1.1rem;
   line-height: 1.6;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
+  text-align: left;
+  padding-left: 1rem;
+  color: #3a3a3a;
 }
 
-.content ul {
+.card ul {
   list-style: none;
   padding: 0;
 }
 
-.content li {
-  margin: 0.75rem 0;
+.card li {
+  margin-bottom: 0.5rem;
 }
 
 .footer {
