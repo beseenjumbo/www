@@ -70,9 +70,15 @@
   <a href="https://x.com/jumbo_token" target="_blank">@jumbo_token on X</a>
   <div class="footer-elephant">
     <img src="./assets/elephant_tiny.png" alt="Trumpeting Elephant" class="tiny-elephant" />
-    <div class="honk-lines">HONK!</div>
+    <div class="honk-lines">
+      <div class="honk-beams">
+        <span></span><span></span><span></span>
+      </div>
+      HONK!
+    </div>
   </div>
 </footer>
+
 </body>
 </html>
 
@@ -143,7 +149,37 @@
     color: #444;
     font-weight: bold;
     font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
     animation: honkAnim 1.2s ease-in-out infinite;
+  }
+
+  .honk-beams {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    left: -30px;
+    top: 2px;
+  }
+
+  .honk-beams span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: orange;
+    transform-origin: left;
+  }
+
+  .honk-beams span:nth-child(1) {
+    transform: rotate(-25deg);
+  }
+  .honk-beams span:nth-child(2) {
+    transform: rotate(0deg);
+  }
+  .honk-beams span:nth-child(3) {
+    transform: rotate(25deg);
   }
 
   @keyframes honkAnim {
