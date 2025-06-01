@@ -66,18 +66,20 @@
 </section>
 
 <footer class="footer">
-  <p>Follow the Jungle Whispers 🐾</p>
-  <a href="https://x.com/jumbo_token" target="_blank">@jumbo_token on X</a>
-  <div class="footer-elephant">
-    <img src="./assets/elephant_tiny.png" alt="Trumpeting Elephant" class="tiny-elephant" />
-    <div class="honk-lines">
+  <div class="footer-elephant-wrapper">
+    <div class="footer-elephant">
+      <img src="./assets/elephant_tiny.png" alt="Trumpeting Elephant" class="tiny-elephant" />
       <div class="honk-beams">
         <span></span><span></span><span></span>
       </div>
-      HONK!
+    </div>
+    <div class="footer-text">
+      <p>Follow the Jungle Whispers 🐾</p>
+      <a href="https://x.com/jumbo_token" target="_blank">@jumbo_token on X</a>
     </div>
   </div>
 </footer>
+
 
 </body>
 </html>
@@ -130,12 +132,18 @@
     100% { transform: translateY(150px) rotate(180deg); opacity: 0; }
   }
 
-  .footer-elephant {
-    margin-top: 1rem;
+  .footer-elephant-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .footer-elephant {
+    display: flex;
+    align-items: center;
     position: relative;
   }
 
@@ -144,24 +152,13 @@
     opacity: 0.75;
   }
 
-  .honk-lines {
-    font-size: 1.1rem;
-    color: #444;
-    font-weight: bold;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    position: relative;
-    animation: honkAnim 1.2s ease-in-out infinite;
-  }
-
   .honk-beams {
     display: flex;
     gap: 4px;
     position: absolute;
-    left: -30px;
-    top: 2px;
+    left: 35px;
+    top: 8px;
+    animation: honkAnim 1.2s ease-in-out infinite;
   }
 
   .honk-beams span {
@@ -180,6 +177,16 @@
   }
   .honk-beams span:nth-child(3) {
     transform: rotate(25deg);
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+
+  .footer-text p,
+  .footer-text a {
+    margin: 0.25rem 0;
+    display: block;
   }
 
   @keyframes honkAnim {
