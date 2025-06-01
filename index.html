@@ -13,6 +13,11 @@
     <p>The Jungle King of Meme Coins</p>
   </header>
 
+  <section class="story-elephant-overlay">
+    <img src="./assets/elephant_faint_left.png" alt="Elephant Shower Left" class="story-elephant" />
+    <div class="coin-shower"></div>
+  </section>
+
   <section class="jumbo-story">
     <h2>The Rise of Jumbo</h2>
     <p>
@@ -25,10 +30,6 @@
       This isn't just another meme coin — it’s a stampede for the people. And every holder gets a front-row seat on the throne trail.
     </p>
   </section>
-<section class="story-elephant-overlay">
-  <img src="./assets/elephant_faint_left.png" alt="Elephant Shower Left" class="story-elephant" />
-  <div class="coin-shower"></div>
-</section>
 
   <section class="info-cards">
     <div class="card">
@@ -83,7 +84,10 @@
 <style>
   .story-elephant-overlay,
   .elephant-animation {
-    position: relative;
+    position: absolute;
+    right: +100px;
+    top: 0;
+    opacity: 0.2;
     overflow: visible;
   }
 
