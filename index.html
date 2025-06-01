@@ -25,6 +25,10 @@
       This isn't just another meme coin — it’s a stampede for the people. And every holder gets a front-row seat on the throne trail.
     </p>
   </section>
+<section class="story-elephant-overlay">
+  <img src="./assets/elephant_faint_left.png" alt="Elephant Shower Left" class="story-elephant" />
+  <div class="coin-shower"></div>
+</section>
 
   <section class="info-cards">
     <div class="card">
@@ -55,11 +59,95 @@
     <li>💱 Swap ETH, MATIC, or SOL via bridge to Polygon</li>
     <li>🎉 Confirm and enjoy your jungle riches!</li>
   </ul>
+  <div class="elephant-animation right">
+    <img src="./assets/elephant_faint_right.png" alt="Elephant Shower Right" class="elephant" />
+    <div class="coin-shower"></div>
+  </div>
 </section>
 
-  <footer class="footer">
-    <p>Follow the Jungle Whispers 🐾</p>
-    <a href="https://x.com/jumbo_token" target="_blank">@jumbo_token on X</a>
-  </footer>
+<footer class="footer">
+  <p>Follow the Jungle Whispers 🐾</p>
+  <a href="https://x.com/jumbo_token" target="_blank">@jumbo_token on X</a>
+  <div class="footer-elephant">
+    <img src="./assets/elephant_tiny.png" alt="Trumpeting Elephant" class="tiny-elephant" />
+  </div>
+</footer>
 </body>
 </html>
+
+<style>
+  .story-elephant-overlay,
+  .elephant-animation {
+    position: relative;
+    overflow: visible;
+  }
+
+  .story-elephant {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    max-width: 180px;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .elephant-animation.right .elephant {
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    max-width: 180px;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .coin-shower {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    animation: coins 10s infinite;
+  }
+
+  .coin-shower::before {
+    content: '💰';
+    font-size: 1.5rem;
+    position: absolute;
+    opacity: 0;
+    animation: coin-fall 2s ease-in-out infinite;
+  }
+
+  @keyframes coin-fall {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(150px) rotate(180deg); opacity: 0; }
+  }
+
+  .footer-elephant {
+    margin-top: 1rem;
+  }
+
+  .tiny-elephant {
+    max-width: 60px;
+    opacity: 0.6;
+  }
+</style>
+
+<script>
+  setInterval(() => {
+    const showers = document.querySelectorAll('.coin-shower');
+    showers.forEach(shower => {
+      const coin = document.createElement('div');
+      coin.className = 'coin';
+      coin.textContent = '💰';
+      coin.style.position = 'absolute';
+      coin.style.left = `${Math.random() * 60}px`;
+      coin.style.top = '0';
+      coin.style.opacity = '1';
+      coin.style.animation = 'coin-fall 2s ease-in-out forwards';
+      coin.style.fontSize = `${Math.random() * 1.2 + 1.0}rem`;
+      shower.appendChild(coin);
+      setTimeout(() => coin.remove(), 2000);
+    });
+  }, 10000);
+</script>
