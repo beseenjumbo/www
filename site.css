@@ -10,10 +10,11 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  background-color: #000;
+  background-color: #214d36;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 3rem;
 }
 
 .hero-img {
@@ -28,6 +29,8 @@ body {
 .hero h1,
 .hero p {
   position: absolute;
+  bottom: 2rem;
+  width: 100%;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
   text-align: center;
@@ -36,32 +39,34 @@ body {
 }
 
 .hero h1 {
-  font-size: 4rem;
-  margin-top: 2rem;
+  font-size: 3.5rem;
 }
 
 .hero p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
 }
 
 .jumbo-story {
   padding: 4rem 10vw;
-  background-color: #e0f7e9;
+  background-color: #dff6eb;
   color: #2a2f2a;
   text-align: center;
+  font-family: 'Papyrus', 'Brush Script MT', cursive;
 }
 
 .jumbo-story h2 {
-  font-size: 2.75rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #1b4d3e;
 }
 
 .jumbo-story p {
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1.25rem;
+  line-height: 1.9;
   max-width: 800px;
   margin: 0 auto;
+  color: #243e2c;
 }
 
 .info-cards {
