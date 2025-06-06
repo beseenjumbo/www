@@ -78,6 +78,19 @@ body {
   color: #243e2c;
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.btn:hover {
+  background-color: #218838;
+}
+
 .info-cards {
   display: flex;
   justify-content: center;
